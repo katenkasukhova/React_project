@@ -1,0 +1,10 @@
+{
+"human":[
+    {"id":1, "fio": "Sukhov E.A.", "age": 44},
+    {"id":2, "fio": "Petrov P.A.", "age": 24},
+    {"id":3, "fio": "Ivanov E.T.", "age": 54},
+    {"id":4, "fio": "Durov E.A.", "age": 47},
+    {"id":5, "fio": "Repka", "age": 41},
+    {"id":5, "fio": "Tomat", "age": 41}    
+]
+}

@@ -2,52 +2,53 @@ import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import CardComponent from './components/CardComponent';
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import CardsPage from './pages/CardsPage';
+import TablePage from './pages/TablePage';
+import PeoplePage from './pages/PeoplePage';
+import DescriptionPage from './pages/DescriptionPage';
 
 function App() {
   return (
+    <Router>
 <div className="App d-flex flex-column min-vh-100">
-<header className="bg-dark text-white py-3">
+
+<header className="text-white py-3" style={{backgroundColor: 'rgb(0, 30, 10)'}}>
   <div className="container">
     <div className="row align-item-center">
-      <div className="col">
+
+      <div className="col-md-6">
         <span>
           <img src={logo} className="App-logo" alt="logo" style={{height: '40px'}}/>
           Мое приложение
         </span>
       </div>
+
+      <div className="col-md-6 text-end">
+        <Link to="/" className="text-white text-decoration-none me-3">Main Page</Link>
+        <Link to="/cards" className="text-white text-decoration-none me-3" >Lyaguhi</Link>
+        <Link to="/table" className="text-white text-decoration-none me-3">Table page</Link>
+        <Link to="/human" className="text-white text-decoration-none me-3">stuff</Link>
+        <Link to="/description" className="text-white text-decoration-none me-3">description</Link>
+        
+      </div>
+
     </div>
   </div>
 </header>
 
 <main className="container my-5">
-<div className="row g-4">
-  <div className="col-md-4">
-    <CardComponent
-    title = "Лягуха 1"
-    imageUrl = "/images/frog1.webp"
-    description = "Одна крутая лягуха"
-    imageAlt = "лягуха 1"/>
-  </div>
-
-   <div className="col-md-4">
-    <CardComponent
-    title = "Лягуха 2"
-    imageUrl = "/images/frog3.webp"
-    description = "Две крутые лягухи"
-    imageAlt = "лягуха 2"/>
-  </div>
-
-   <div className="col-md-4">
-    <CardComponent
-    title = "Лягуха 3"
-    imageUrl = "/images/frog5.png"
-    description = "Три крутые лягухи"
-    imageAlt = "лягуха 3"/>
-  </div>
-</div>
+<Routes>
+  <Route path="/" element={<HomePage/>}/>
+  <Route path="/cards" element={<CardsPage/>}/>
+  <Route path="/table" element={<TablePage/>}/>
+  <Route path="/human" element={<PeoplePage/>}/>
+  <Route path="/description" element={<DescriptionPage/>}/>
+</Routes>
 </main>
 
-<footer className="bg-secondary py-3 mt-auto">
+<footer className="py-3 mt-auto" style={{backgroundColor: 'rgba(2, 114, 1)'}}>
   <div className="container">
     <div className="row align-items-center">
       <div className="col">
@@ -60,6 +61,7 @@ function App() {
 
 </footer>
 </div>
+</Router>
   )
 }
 
