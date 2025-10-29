@@ -8,6 +8,12 @@ import CardsPage from './pages/CardsPage';
 import TablePage from './pages/TablePage';
 import PeoplePage from './pages/PeoplePage';
 import DescriptionPage from './pages/DescriptionPage';
+import FormPages from './pages/FormPage';
+import FormPage from './pages/FormPage';
+import MapsPage from './pages/MapsPage';
+import UsersPage from './pages/UsersPage';
+import TypeScript from './pages/TypeScript';
+import CalculatePage from './pages/CalculatePage';
 
 function App() {
   return (
@@ -31,7 +37,12 @@ function App() {
         <Link to="/table" className="text-white text-decoration-none me-3">Table page</Link>
         <Link to="/human" className="text-white text-decoration-none me-3">stuff</Link>
         <Link to="/description" className="text-white text-decoration-none me-3">description</Link>
-        
+        <Link to="/form" className="text-white text-decoration-none me-3">form</Link>
+        <Link to="/maps" className="text-white text-decoration-none me-3">maps</Link>
+        <Link to="/users" className="text-white text-decoration-none me-3">users</Link>
+        <Link to="/typescript" className="text-white text-decoration-none me-3">TS</Link>
+        <Link to="/calc" className="text-white text-decoration-none me-3">calc</Link>
+      
       </div>
 
     </div>
@@ -45,6 +56,11 @@ function App() {
   <Route path="/table" element={<TablePage/>}/>
   <Route path="/human" element={<PeoplePage/>}/>
   <Route path="/description" element={<DescriptionPage/>}/>
+  <Route path='/form' element={<FormPage/>}/>
+  <Route path='/maps' element={<MapsPage/>}/>
+  <Route path='/users' element={<UsersPage/>}/>
+  <Route path='/typescript' element={<TypeScript/>}/>
+  <Route path='/calc' element={<CalculatePage/>}/>
 </Routes>
 </main>
 
